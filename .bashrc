@@ -1,10 +1,10 @@
 # Load helper files
-if [ -f .bash_aliases ]; then
-    . .bash_aliases
+if [ -f ~/Dev/dotfiles/.bash_aliases ]; then
+    . ~/Dev/dotfiles/.bash_aliases
 fi
 
-if [ -f .bash_functions ]; then
-    . .bash_functions
+if [ -f ~/Dev/dotfiles/.bash_functions ]; then
+    . ~/Dev/dotfiles/.bash_functions
 fi 
 
 # Startup
