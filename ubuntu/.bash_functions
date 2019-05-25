@@ -31,7 +31,18 @@ function and() {
 # Prints battery level from acpi package
 function print_current_battery_level() {
   cls;
-  acpi | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n1) | lolcat
+  # acpi | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n1) | lolcat
+  acpi | figlet 
+}
+
+function show_clock() {
+  while :
+  do
+     cls;
+     date +%x | figlet;
+     date +%r | figlet;
+     sleep 1;
+  done 
 }
 
 # Goes through the apt remove log and reinstalls the last deleted packages

@@ -9,6 +9,10 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi 
 
+if [ -f ~/.bash_sources ]; then
+    . ~/.bash_sources
+fi 
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
