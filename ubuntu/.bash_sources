@@ -1,4 +1,0 @@
-source /opt/ros/kinetic/setup.bash
-source ~/.workspace/devel/setup.bash
-export ASTRA_SDK_INCLUDE=/home/ronald/Dev/Astra_SDK/include
-export ASTRA_SDK_LIB=/home/ronald/Dev/Astra_SDK/install/lib
