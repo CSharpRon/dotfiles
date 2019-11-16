@@ -47,7 +47,7 @@ set list listchars=tab:>>,trail:~
 let g:jinx_theme = 'midnight'
 
 try
-    colorscheme quantum
+    colorscheme jinx
 catch
     colorscheme slate
 endtry

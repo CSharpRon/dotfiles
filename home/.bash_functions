@@ -68,3 +68,45 @@ function find_file() {
     find / -name "*$1*"  2>&1 | grep -v "Permission denied"
 }
 
+function fix() {
+    case $1 in 
+
+        wi-fi)
+            ;&
+        wifi)
+            sudo modprobe -r ath10k_pci && sudo modprobe ath10k_pci
+            ;;
+        *)
+            ;;
+    esac
+}
+
+function start() {
+    case $1 in
+
+        vpn)
+            sudo systemctl start openvpn-client@US_Atlanta
+            notify-send --icon=gtk-info "VPN Started Successfully" $(systemctl status openvpn-client* | awk 'NR == 1' | awk -F' ' '{print $7}')
+            ;;
+        *)
+            ;;
+    esac
+}
+
+function stop() {
+    case $1 in
+
+        vpn)
+            sudo systemctl stop openvpn-client@US_Atlanta
+            notify-send --icon=gtk-info "VPN Stopped"
+            ;;
+        *)
+            ;;
+    esac
+}
+
+function update-grub() {
+    mkdir ~/.grub-backup >/dev/null 2>/dev/null;
+    sudo cp /boot/grub/grub.cfg ~/.grub-backup;
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+}

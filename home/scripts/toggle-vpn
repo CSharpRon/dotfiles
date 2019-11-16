@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+source ~/.bash_functions
+status=$(systemctl status openvpn-client* | awk 'NR == 3' | awk -F' ' '{print $2}')
+
+# Start or stop vpn depending on its current status
+if [ -z $status ] || ! [ $status == 'active' ]; then
+    start vpn
+else
+    stop vpn
+fi
+

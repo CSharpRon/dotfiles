@@ -3,5 +3,6 @@
 .gitconfig
 .python_history
 .bash_history
+.viminfo
 __pycache__
 backup/*

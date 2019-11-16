@@ -19,3 +19,6 @@ xset dpms 600 900 1200
 
 # keyboard repeat rate
 xset r rate 350 60
+
+# Lock Computer on sleep
+xss-lock -- /usr/bin/i3lock-fancy &

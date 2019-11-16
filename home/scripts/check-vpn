@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+vpnoff=""
+vpnon=""
+
+while true; do
+
+    status=$(systemctl status openvpn-client* | awk 'NR == 3' | awk -F' ' '{print $2}')
+    if [ -z $status ] || ! [ $status == 'active' ]; then
+        echo "$vpnoff"
+        sleep 5
+    else
+        echo "$vpnon"
+        sleep 5
+    fi
+done

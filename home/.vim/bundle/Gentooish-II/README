@@ -1,0 +1,3 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4371
+
+This script is a modified version of the Gentooish color scheme (vimscript #2474) which has no background color (so it can be used in a transparent terminal without being ugly) and some other changes.
