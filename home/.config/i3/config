@@ -23,12 +23,12 @@ exec --no-startup-id xfce4-power-manager
 # run with reload
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id xrdb -load ~/.Xresources
+exec_always --no-startup-id ~/scripts/restart-compton.sh
 
 # exec_always --no-startup-id numlockx on
 
 # run once
 exec --no-startup-id xfsettingsd
-exec --no-startup-id al-compositor --start
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers*
 
 # needed for super to launch rofi through ksuperkey, see ~/.xprofile

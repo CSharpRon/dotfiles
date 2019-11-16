@@ -7,4 +7,3 @@ if ! [ -z $pid ]; then
     kill -s 15 $pid
 fi
 compton --config ~/.config/compton.conf >/dev/null 2>/dev/null &
-# sleep 1;
