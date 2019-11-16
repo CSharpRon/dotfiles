@@ -1,7 +1,8 @@
 # Nifty Aliases 
 alias up='cd ../;'
 alias andaway='up'
-alias please='sudo apt-get'
+alias please='yay'
+alias install='-S'
 alias cls='clear && echo -en "\e[3J"'
 
 # Default Aliases
@@ -21,3 +22,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lynx='lynx -vikeys'
+alias unzip='unzzip'
+alias visualizer='cava'
+alias spt='~/.cargo/bin/spt'
+alias restart='shutdown -r 0'
+alias restart_keyboard='sudo rmmod atkbd ; sudo modprobe atkbd reset=1'

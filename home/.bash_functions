@@ -23,7 +23,17 @@ function get_battery_level() {
   echo $level
 }
 
-# Allows me to do "up up and away"
+function up() {
+  traversed=("$(pwd)" "${traversed[@]}")
+  cd ../
+}
+
+function down() {
+  cd "$(traversed[0])"
+  traversed=("${traversed[@]:1}")
+}
+
+# Allows me to do up up and away
 function and() {
  up
 }
@@ -55,5 +65,6 @@ function undo_apt_removes() {
 
 # Searches the entire system for a particular file name
 function find_file() {
- find / -name "*$1*"  2>&1 | grep -v "Permission denied"
+    find / -name "*$1*"  2>&1 | grep -v "Permission denied"
 }
+
