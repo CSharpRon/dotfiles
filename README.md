@@ -3,7 +3,7 @@ Here are my ever-changing config files. Included is a Python3 installation scrip
 
 ## Installation
 ``` sh
-git clone https://github.com/CSharpRon/dotfiles
+git clone https://github.com/CSharpRon/dotfiles.git
 cd dotfiles
 python3 install.py
 ```
