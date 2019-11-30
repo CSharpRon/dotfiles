@@ -6,3 +6,4 @@
 .viminfo
 __pycache__
 backup/*
+home/.vim/.netrwhist
