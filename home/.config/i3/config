@@ -91,7 +91,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+u split h
+bindsym $mod+Shift+V split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -170,11 +170,6 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous 
-
-# Disable caps lock Switch and set to escape 
-exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
-exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock" #set caps_lock as escape
-exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape" #set caps_lock as escape
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "~/scripts/screen-brightness.sh +"
