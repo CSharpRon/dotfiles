@@ -5,12 +5,23 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.git_aliases ]; then
+    . ~/.git_aliases
+fi
+
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
-fi 
+fi
 
 if [ -f ~/.bash_sources ]; then
     . ~/.bash_sources
+fi
+
+# Source either the catkin workspace or ros itself (whichever is available)
+if [ -f ~/catkin_workspace/install/setup.bash ]; then
+    . ~/catkin_workspace/install/setup.bash
+elif [ -f /opt/ros/melodic/setup.bash ]; then
+    . /opt/ros/melodic/setup.bash
 fi
 
 # catch non-bash and non-interactive shells

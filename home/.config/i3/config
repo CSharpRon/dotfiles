@@ -21,7 +21,7 @@ exec --no-startup-id xset fp rehash
 exec --no-startup-id xfce4-power-manager
 
 # run with reload
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id ~/scripts/launch_polybar.sh
 exec_always --no-startup-id xrdb -load ~/.Xresources
 exec_always --no-startup-id ~/scripts/restart-compton.sh
 

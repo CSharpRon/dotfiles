@@ -1,0 +1,5 @@
+#vim syntax=bash
+alias gc='git commit -m'
+alias gsc='git commit -S -m'
+alias pull='git pull'
+alias push='git push'
