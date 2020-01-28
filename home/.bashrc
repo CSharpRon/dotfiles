@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Load helper files
+if [ -f ~/.ascii_art ]; then
+    . ~/.ascii_art
+fi
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -15,6 +19,10 @@ fi
 
 if [ -f ~/.bash_sources ]; then
     . ~/.bash_sources
+fi
+
+if [ -f ~/.bash_exports ]; then
+    . ~/.bash_exports
 fi
 
 # Source either the catkin workspace or ros itself (whichever is available)
