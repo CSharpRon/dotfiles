@@ -47,9 +47,8 @@ set list listchars=tab:>>,trail:~
 let g:jinx_theme = 'night'
 
 try
-    colorscheme quantum
-catch
     colorscheme slate
+catch
 endtry
 
 if $TERM !=? 'linux'
