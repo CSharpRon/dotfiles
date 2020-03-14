@@ -252,3 +252,4 @@ function __show_ip() {
         echo "$OUTPUT[@]"
         i=$(( $i + 2 ))
     done
+}
