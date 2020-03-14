@@ -38,7 +38,6 @@ function down() {
 
 # Allows me to do up up and away
 function and() {
-<<<<<<< HEAD
  up
 }
 
@@ -99,9 +98,6 @@ function undo_apt_removes() {
 # Searches the entire system for a particular file name
 function find_file() {
     find / -name "*$1*"  2>&1 | grep -v "Permission denied"
-=======
-    up $@
->>>>>>> 4c6da9154d91ee93a529cdcebbc3d471ad65b71c
 }
 
 function fix() {
@@ -256,20 +252,3 @@ function __show_ip() {
         echo "$OUTPUT[@]"
         i=$(( $i + 2 ))
     done
-
-#    $i=1
-#    for address in $addresses
-#    do
-#        $OUTPUT[$i]=$address
-#        $i=$i+2
-#    done
-#
-#    $i=0
-#    for output in $OUTPUT
-#    do
-#        #echo $output
-#        if ( $i%1 == 0 ); then
-#            echo ""
-#        fi
-#    done
-}
