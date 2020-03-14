@@ -5,5 +5,8 @@ pid=$(pidof "compton")
 
 if ! [ -z $pid ]; then
     kill -s 15 $pid
+else
+    sleep 3 # If compton isn't running, wait a few seconds to register connected monitors
 fi
+
 compton --config ~/.config/compton.conf >/dev/null 2>/dev/null &

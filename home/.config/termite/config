@@ -1,32 +1,44 @@
 [options]
-font = Monospace 14
+font = Mononoki Bold 14
 mouse_autohide = true
 scrollback_lines = 10000
 
 [colors]
-# If unset, will reverse foreground and background
-highlight = #2f2f2f
 
-# Colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
+# special
+foreground      = #949ABC
+foreground_bold = #949ABC
+cursor          = #dbd6d4
+background      = #2a2a2e
 
-transparency = 0.0
-foreground = color7
-foreground_bold = #fedfed
-foreground_dim = #888888
-background = rgba(0, 0, 0, 0.0)
+# black
+color0  = #100e0d
+color8  = #51cda6
+
+# red
+color1  = #dbd6d4
+color9  = #4caf8e
+
+# green
+color2  = #dbd6d4
+color10 = #51cae9
+
+# yellow
+color3  = #dbd6d4
+color11 = #ea77b5
+
+# blue
+color4  = #51cae9
+color12 = #509980
+
+# Prompt Top
+color5  = #94B0BC
+color13 = #ed7eba
+
+# Prompt TERM
+color6  = #949ABC
+color14 = #a273ec
+
+# white
+color7  = #949ABC
+color15 = #f591c5

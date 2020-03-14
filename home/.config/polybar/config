@@ -33,7 +33,7 @@ monitor = ${env:MONITOR:}
 
 modules-left   = i3 menu
 modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse pkg temperature network vpn battery volume}
+modules-right  = ${env:POLYBAR_MODULES:pkg temperature network vpn battery volume}
 
 
 ;=====================================================
