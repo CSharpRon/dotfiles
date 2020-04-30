@@ -22,10 +22,10 @@ exec --no-startup-id xfce4-power-manager
 # run with reload
 exec_always --no-startup-id ~/scripts/launch_polybar.sh
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id ~/scripts/restart-compton.sh
+exec_always --no-startup-id ~/scripts/restart-picom.sh
 
 # run once
-exec --no-startup-id xfsettingsd
+# exec --no-startup-id xfsettingsd
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers*
 
 # needed for super to launch rofi through ksuperkey, see ~/.xprofile
@@ -34,6 +34,7 @@ exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers*
 ###################################################
 ############    application settings   ############
 ################################################### 
+for_window [class="(?i)(?:Arandr)"] floating enable, focus
 for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"]  focus
@@ -142,6 +143,9 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+# open display settings
+bindsym $mod+p exec arandr
 
 # Lock computer
 bindsym $mod+Delete exec i3lock-fancy -p -f Ubuntu &
