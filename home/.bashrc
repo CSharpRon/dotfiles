@@ -25,13 +25,6 @@ if [ -f ~/.bash_exports ]; then
     . ~/.bash_exports
 fi
 
-# Source either the catkin workspace or ros itself (whichever is available)
-if [ -f ~/catkin_workspace/install/setup.bash ]; then
-    . ~/catkin_workspace/install/setup.bash
-elif [ -f /opt/ros/melodic/setup.bash ]; then
-    . /opt/ros/melodic/setup.bash
-fi
-
 # catch non-bash and non-interactive shells
 [[ $- == *i* && $BASH_VERSION ]] && SHELL=/bin/bash || return 0
 
@@ -81,5 +74,4 @@ for f in "$HOME/.bash/"*?.bash; do
     . "$f"
 done
 
-# al-info
-alias vim='gvim -v' 
+alias vim='gvim -v'
