@@ -17,12 +17,13 @@ $else
     set vi-cmd-mode-string \1\e[2 q\2
 $endif
 
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
 $if mode=vi
     set keymap vi-command
     j: history-search-forward
     k: history-search-backward
-    "\e[A": history-search-backward
-    "\e[B": history-search-forward
 
     set keymap vi-insert
     TAB: menu-complete

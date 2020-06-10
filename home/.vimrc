@@ -7,7 +7,8 @@ runtime! archlinux.vim
 
 " system clipboard (requires +clipboard)
 set clipboard=unnamed,unnamedplus
-vnoremap <C-c> "*y
+vnoremap <C-c> "+y
+
 " additional settings
 set modeline           " enable vim modelines
 set hlsearch           " highlight search items
@@ -22,7 +23,7 @@ set shortmess+=aAcIws  " Hide or shorten certain messages
 
 let g:netrw_altv = 1
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 3
+let g:netrw_browse_split = 0
 
 " ------ leader mapping ------
 

@@ -44,6 +44,9 @@ export LESS_TERMCAP_us=$'\e[01;32m'
 
 # ensure ~/bin is on the path
 [[ $PATH =~ ~/bin ]] || PATH=~/bin:$PATH
+[[ $PATH =~ ~/.local/bin ]] || PATH=~/.local/bin:$PATH
+[[ $PATH =~ ~/scripts ]] || PATH=~/scripts:$PATH
+
 export PATH=~/.npm-global/bin:$PATH
 set -o vi
 set -o notify
