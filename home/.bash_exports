@@ -7,3 +7,4 @@ declare -a TRAVERSED
 export TRAVERSED
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
+export ROS_OS_OVERRIDE=ubuntu:20.04:focal

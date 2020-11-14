@@ -1,0 +1,86 @@
+! -- Macros
+#define color_magenta #D4BFFF
+#define typeface_gnome_terminal JetBrains Mono 12
+#define typeface_bar_glyph_battery_unknown 
+#define typeface_bar_glyph_time 
+#define glyph_font QUOTE(typeface_bar_glyph)
+#define color_ltgreen #A6CC70
+#define color_base00 #CBCCC6
+#define typeface_bar_glyph_error 
+#define color_base01 #BFBAB0
+#define color_red #FF3333
+#define color_base02 #292B30
+#define i3wm_floatingwindow_border_size 1
+#define color_base03 #1F2430
+#define typeface_bar_glyph_sound 
+#define color_ltblue #73D0FF
+#define i3wm_gaps_outer_size 0
+#define typeface_bar_glyph_battery_0 
+#define typeface_bar_glyph_disk 
+#define typeface_bar_glyph_notify_some 
+#define typeface_terminal JetBrains Mono:pixelsize=16:antialias=true:autohint=true
+#define typeface_bar_glyph_memory 
+#define typeface_bar_glyph_numlock 
+#define i3wm_bar_position bottom
+#define WORKSPACE_NAME(INDEX, FONT, COLOR, GLYPH) INDEX:<span font_desc=FONT> INDEX </span>
+#define typeface_bar_glyph_battery_20 
+#define color_blue #77A8D9
+#define typeface_bar pango:JetBrains Mono Medium 13, Material Design Icons 13
+#define color_brown #F29E74
+#define color_orange #FFA759
+#define typeface_bar_glyph_workspace 
+#define i3wm_gaps_inner_size 5
+#define color_yellow #FFD580
+#define typeface_bar_glyph_help 
+#define color_ltcyan #5CCFE6
+#define typeface_wm pango:JetBrains Mono Medium 13
+#define typeface_bar_glyph JetBrains Mono Medium 13
+#define typeface_bar_glyph_on 
+#define typeface_bar_glyph_off 
+#define typeface_bar_glyph_media_playing 
+#define typeface_bar_glyph_mute 
+#define typeface_bar_glyph_battery_ac 
+#define icon_theme Moka
+#define color_cyan #95E6CB
+#define color_green #BAE67E
+#define typeface_bar_glyph_battery_80 
+#define desktop_wallpaper /usr/share/backgrounds/ESP_016895_1525_desktop.jpg
+#define typeface_bar_glyph_cpu 
+#define typeface_bar_glyph_wifi 
+#define typeface_bar_glyph_media_paused 
+#define typeface_bar_glyph_dn 
+#define typeface_bar_glyph_notify_none 
+#define typeface_bar_glyph_capslock 
+#define typeface_bar_glyph_thermometer 
+#define glyph typeface_bar_glyph_workspace
+#define color_base0 #E6E1CF
+#define rofi_theme /etc/regolith/styles/lascaille/rofi.rasi
+#define color_base1 #E6E1CF
+#define gtk_theme Ayu-Mirage-Dark
+#define theme_terminal_scrollbar never
+#define Q(x) #x
+#define QUOTE(x) Q(x)
+#define color_base2 #F28779
+#define typeface_bar_glyph_wired 
+#define color_ltyellow #FFE6B3
+#define color_base3 #FFFFFF
+#define typeface_bar_glyph_battery_100 
+#define typeface_rofi JetBrains Mono Medium 16
+#define typeface_bar_glyph_battery_charging 
+#define typeface_bar_glyph_up 
+#define color_violet #B48EAD
+#define typeface_bar_glyph_battery_50 
+#define i3wm_window_border_size 2
+#define typeface_bar_glyph_notify_error 
+
+! -- Custom variables
+i3-wm.bar.workspace.focused.border.color: color_yellow
+gnome.gtk.theme: Ayu-Mirage-Dark
+i3-wm.bar.font: pango:JetBrains Mono Medium 13, FontAwesome 13
+rofi.icon-theme: Pop
+gnome.wallpaper: /usr/share/backgrounds/pop/tony-webster-97532.jpg
+gnome.icon.theme: Pop
+i3-wm.bar.workspace.focused.background.color: color_yellow
+i3xrocks.label.time: 
+i3xrocks.label.wifi: 
+i3-wm.bar.position: bottom

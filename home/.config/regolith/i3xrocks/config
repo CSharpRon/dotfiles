@@ -1,0 +1,52 @@
+# i3xrocks config file
+# # The man page for i3blocks is hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Font Awesome Copy/Paste: https://fontawesome.veliovgroup.com/design.html
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=~/.config/regolith/i3xrocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+color=xresource:i3xrocks.value.color
+label_color=xresource:i3xrocks.label.color
+
+
+# Rofication
+#
+# Displays notifications.
+[rofication]
+interval=10
+
+# Displays network load
+[net-traffic]
+interval=30
+
+[battery]
+interval=60
+
+# Date
+[date]
+interval=10
+
+# Time
+[time]
+interval=10

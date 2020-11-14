@@ -78,3 +78,10 @@ for f in "$HOME/.bash/"*?.bash; do
 done
 
 alias vim='gvim -v'
+
+# Source a ROS setup file, if it exists.
+# if [ -f "/home/ronald/ezrassor_ws/setup.bash" ]; then
+    #. "/home/ronald/ezrassor_ws/setup.bash"
+#fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
