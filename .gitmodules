@@ -1,3 +1,6 @@
 [submodule "home/.vim/bundle/vim-rzip"]
 	path = home/.vim/bundle/vim-rzip
 	url = https://github.com/lbrayner/vim-rzip
+[submodule "fonts/powerline-fonts"]
+	path = fonts/powerline-fonts
+	url = https://github.com/powerline/fonts.git

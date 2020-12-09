@@ -546,4 +546,5 @@ exec --no-startup-id $i3-wm.program.3
 ###############################################################################
 # Launch every time i3 is reloaded
 ###############################################################################
-exec_always --no-startup-id feh --randomize --bg-fill /usr/share/backgrounds/pop/*
+#exec_always --no-startup-id feh --randomize --bg-fill /usr/share/backgrounds/pop/*
+exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*

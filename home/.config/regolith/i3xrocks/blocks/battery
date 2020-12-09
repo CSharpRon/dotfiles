@@ -1,22 +1,19 @@
 #!/bin/bash
 
-BAT_FULL=$(echo $(acpi -b))
-BAT=$(echo $BAT_FULL | grep -E -o '[0-9][0-9][0-9]?%')
+BAT_LEVEL=$(cat /sys/class/power_supply/BAT0/capacity)
+BAT_STATUS=$(cat /sys/class/power_supply/BAT0/status)
 CHARGING=""
 
-if [[ $BAT == "" ]]; then
-    BAT=$(echo $BAT_FULL | grep -E -o '[0-9]?%')
-fi
-if [[ $BAT_FULL == *"Charging"* ]]; then
+if [[ $BAT_STATUS == *"Charging"* ]]; then
     CHARGING=" "
 fi
 
 # Display the battery icon that is closest the actual level
-[ ${BAT%?} -ge 90 ] && echo "$CHARGING  $BAT " && exit 0
-[ ${BAT%?} -ge 70 ] && echo "$CHARGING  $BAT " && exit 0
-[ ${BAT%?} -ge 40 ] && echo "$CHARGING  $BAT " && exit 0
-[ ${BAT%?} -ge 20 ] && echo "$CHARGING  $BAT " && exit 0
-[ ${BAT%?} -ge 0 ]  && echo "$CHARGING  $BAT " && exit 0
+[ ${BAT_LEVEL} -ge 90 ] && echo "$CHARGING  $BAT_LEVEL " && exit 0
+[ ${BAT_LEVEL} -ge 70 ] && echo "$CHARGING  $BAT_LEVEL" && exit 0
+[ ${BAT_LEVEL} -ge 40 ] && echo "$CHARGING  $BAT_LEVEL" && exit 0
+[ ${BAT_LEVEL} -ge 20 ] && echo "$CHARGING  $BAT_LEVEL" && exit 0
+[ ${BAT_LEVEL} -ge 0 ]  && echo "$CHARGING  $BAT_LEVEL" && exit 0
 
 if [ ! -z "$button" ]; then
     /usr/bin/i3-msg -q exec /usr/bin/gnome-control-center power

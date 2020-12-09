@@ -5,8 +5,7 @@
 #--------------------------------------------------------------------------
 
 # Go up a directory, but remember your starting place
-function up() { 
-    
+function up() {
     # Append current path
     TRAVERSED+=($(pwd))
 

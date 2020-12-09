@@ -65,23 +65,14 @@ shopt -s cmdhist histappend histreedit histverify
 # prompt if file sourcing below fails
 PS1='[\u@\h \W]\$ '
 
-# uncomment these lines to disable the multi-line prompt
-# add user@host, and remove the unicode line-wrap characters
-
-# export PROMPT_LNBR1=''
-# export PROMPT_MULTILINE=''
-# export PROMPT_USERFMT='\u\[\e[0m\]@\[\e[31m\]\h '
-
 # source shell configs
 for f in "$HOME/.bash/"*?.bash; do
     . "$f"
 done
 
-alias vim='gvim -v'
-
-# Source a ROS setup file, if it exists.
-# if [ -f "/home/ronald/ezrassor_ws/setup.bash" ]; then
-    #. "/home/ronald/ezrassor_ws/setup.bash"
-#fi
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+if [ -f ~/.ezrassorrc ]; then
+    . ~/.ezrassorrc
+fi
+clear
